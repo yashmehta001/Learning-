@@ -1,10 +1,11 @@
-function App() {
+import NavBar from "./components/NavBar";
 
+function App() {
   return (
     <>
-      <p className="text-3xl font-bold underline text-yellow-500">Hello World!</p>
+      <NavBar />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
