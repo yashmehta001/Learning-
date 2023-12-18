@@ -1,10 +1,17 @@
-function App() {
+import About from "./components/About";
+import Home from "./components/Home";
+import NavBar from "./components/NavBar";
+import Skills from "./components/Skills";
 
+function App() {
   return (
     <>
-      <p className="text-3xl font-bold underline text-yellow-500">Hello World!</p>
+      <NavBar />
+      <Home />
+      <About />
+      <Skills />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
