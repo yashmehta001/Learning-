@@ -4,6 +4,7 @@ function Contact() {
       name="contact"
       className="w-full h-screen bg-[#0a192f] flex justify-center items-center p-4"
     >
+      {/* To-Do integrate email onces the form is submitted and a popup or new page for confirm submission and form cleanup */}
       <form action="" className="flex flex-col max-w-[600px] w-full">
         <div className="pb-8">
           <p className="text-4xl font-bold inline border-b-4 border-pink-600 text-gray-300">
