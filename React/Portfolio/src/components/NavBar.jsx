@@ -9,6 +9,42 @@ function NavBar() {
   function handleClick() {
     setNav(!nav);
   }
+
+  const socialLinks = [
+    {
+      id: 1,
+      title: "LinkedIn",
+      color: "bg-blue-600",
+      child: <FaLinkedin size={30} />,
+      href: "https://www.linkedin.com/in/yash-r-mehta/",
+      download: false,
+    },
+    {
+      id: 2,
+      title: "Github",
+      color: "bg-[#333333]",
+      child: <FaGithub size={30} />,
+      href: "https://github.com/yashmehta001",
+      download: false,
+    },
+    {
+      id: 3,
+      title: "Email",
+      color: "bg-[#6fc2b0]",
+      child: <HiOutlineMail size={30} />,
+      href: "mailto:yashmehta766@gmail.com",
+      download: false,
+    },
+    {
+      id: 4,
+      title: "Resume",
+      color: "bg-[#565f69]",
+      child: <BsFillPersonLinesFill size={30} />,
+      href: "/resume.pdf",
+      download: false,
+    },
+  ];
+
   return (
     <div className="fixed w-full h-[80px] flex justify-between items-center px-4 bg-[#0a192f] text-gray-300">
       <div>
@@ -98,46 +134,23 @@ function NavBar() {
       {/* social Icons */}
       <div className="hidden lg:fixed lg:flex flex-col top-[35%] left-0">
         <ul>
-          <li className="w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] hover:rounded-md duration-300 bg-blue-600">
-            <a
-              href="https://www.linkedin.com/"
-              className="flex justify-between items-center w-full text-gray-300"
-              target="_blank"
-              rel="noreferrer"
+          {socialLinks.map(({ id, title, child, color, href, download }) => (
+            <li
+              key={id}
+              className={`w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] hover:rounded-md duration-300 ${color}`}
             >
-              LinkedIn
-              <FaLinkedin size={30} />
-            </a>
-          </li>
-          <li className="w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] hover:rounded-md duration-300 bg-[#333333]">
-            <a
-              href="https://github.com/yashmehta001"
-              className="flex justify-between items-center w-full text-gray-300"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Github
-              <FaGithub size={30} />
-            </a>
-          </li>
-          <li className="w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] hover:rounded-md duration-300 bg-[#6fc2b0]">
-            <a
-              href="mailto:yashmehta766@gmail.com"
-              className="flex justify-between items-center w-full text-gray-300"
-            >
-              Email
-              <HiOutlineMail size={30} />
-            </a>
-          </li>
-          <li className="w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] hover:rounded-md duration-300 bg-[#565f69]">
-            <a
-              href="/"
-              className="flex justify-between items-center w-full text-gray-300"
-            >
-              Resume
-              <BsFillPersonLinesFill size={30} />
-            </a>
-          </li>
+              <a
+                href={href}
+                className="flex justify-between items-center w-full text-gray-300"
+                target="_blank"
+                rel="noreferrer"
+                download={download}
+              >
+                {title}
+                {child}
+              </a>
+            </li>
+          ))}
         </ul>
       </div>
     </div>
