@@ -12,6 +12,8 @@ function Work() {
         {/* container */}
         <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
           {/* Grid Item */}
+          {/* To-Do change the code so that it get data for an Online backend */}
+          {/* To-Do add a loop to prevent code repetition */}
           <div
             style={{ backgroundImage: `url(${AWS})` }}
             className="shadow-lg shadow-[#040C16] group container rounded-md text-center flex justify-center items-center mx-auto content-div"

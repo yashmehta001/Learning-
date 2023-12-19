@@ -20,7 +20,8 @@ function Skills() {
             These are the technologies I&rsquo;ve worked with
           </p>
         </div>
-
+        {/* To-Do change the code so that it get data for an Online backend */}
+        {/* To-Do add a loop to prevent code repetition */}
         <div className="w-full grid grid-cols-2 sm:grid-cols-4 gap-4 text-center py-8 ">
           <div className="shadow-md shadow-[#040c16] hover:scale-110 duration-500">
             <img className="w-20 mx-auto" src={HTML} alt="HTML icon" />
