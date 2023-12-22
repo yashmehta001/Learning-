@@ -8,8 +8,76 @@ import GitHub from "../assets/github.png";
 import Tailwind from "../assets/tailwind.png";
 import Mongo from "../assets/mongo.png";
 function Skills() {
+  const skills = [
+    {
+      id: 1,
+      title: "HTML",
+      img: HTML,
+      shadow: "shadow-[#040c16]",
+      alt: "HTML icon",
+    },
+    {
+      id: 2,
+      title: "CSS",
+      img: CSS,
+      shadow: "shadow-[#040c16]",
+      alt: "CSS icon",
+    },
+    {
+      id: 3,
+      title: "JavaScript",
+      img: JavaScript,
+      shadow: "shadow-[#040c16]",
+      alt: "JAVASCRIPT icon",
+    },
+    {
+      id: 4,
+      title: "REACT",
+      img: ReactImg,
+      shadow: "shadow-[#040c16]",
+      alt: "REACT icon",
+    },
+    {
+      id: 5,
+      title: "NODE JS",
+      img: Node,
+      shadow: "shadow-[#040c16]",
+      alt: "NODE JS icon",
+    },
+    {
+      id: 6,
+      title: "MONGO DB",
+      img: Mongo,
+      shadow: "shadow-[#040c16]",
+      alt: "MONGO DB icon",
+    },
+    {
+      id: 7,
+      title: "Tailwind",
+      img: Tailwind,
+      shadow: "shadow-[#040c16]",
+      alt: "Tailwind icon",
+    },
+    {
+      id: 8,
+      title: "FIREBASE",
+      img: FireBase,
+      shadow: "shadow-[#040c16]",
+      alt: "FIREBASE icon",
+    },
+    {
+      id: 9,
+      title: "GITHUB",
+      img: GitHub,
+      shadow: "shadow-[#040c16]",
+      alt: "GITHUB icon",
+    },
+  ];
   return (
-    <div name="skills" className="w-full md:h-screen bg-[#0a192f] text-gray-300">
+    <div
+      name="skills"
+      className="w-full md:h-screen bg-[#0a192f] text-gray-300"
+    >
       {/* Container */}
       <div className="max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full ">
         <div>
@@ -21,48 +89,16 @@ function Skills() {
           </p>
         </div>
         {/* To-Do change the code so that it get data for an Online backend */}
-        {/* To-Do add a loop to prevent code repetition */}
         <div className="w-full grid grid-cols-2 sm:grid-cols-4 gap-4 text-center py-8 ">
-          <div className="shadow-md shadow-[#040c16] hover:scale-110 duration-500">
-            <img className="w-20 mx-auto" src={HTML} alt="HTML icon" />
-            <p className="my-4">HTML</p>
-          </div>
-          <div className="shadow-md shadow-[#040c16] hover:scale-110 duration-500">
-            <img className="w-20 mx-auto" src={CSS} alt="CSS icon" />
-            <p className="my-4">CSS</p>
-          </div>
-          <div className="shadow-md shadow-[#040c16] hover:scale-110 duration-500">
-            <img
-              className="w-20 mx-auto"
-              src={JavaScript}
-              alt="JAVASCRIPT icon"
-            />
-            <p className="my-4">JAVASCRIPT</p>
-          </div>
-          <div className="shadow-md shadow-[#040c16] hover:scale-110 duration-500">
-            <img className="w-20 mx-auto" src={ReactImg} alt="REACT icon" />
-            <p className="my-4">REACT</p>
-          </div>
-          <div className="shadow-md shadow-[#040c16] hover:scale-110 duration-500">
-            <img className="w-20 mx-auto" src={GitHub} alt="GITHUB icon" />
-            <p className="my-4">GITHUB</p>
-          </div>
-          <div className="shadow-md shadow-[#040c16] hover:scale-110 duration-500">
-            <img className="w-20 mx-auto" src={Node} alt="NODE JS" />
-            <p className="my-4">NODE JS</p>
-          </div>
-          <div className="shadow-md shadow-[#040c16] hover:scale-110 duration-500">
-            <img className="w-20 mx-auto" src={Mongo} alt="MONGO DB icon" />
-            <p className="my-4">MONGO DB</p>
-          </div>
-          <div className="shadow-md shadow-[#040c16] hover:scale-110 duration-500">
-            <img className="w-20 mx-auto" src={Tailwind} alt="TAILWIND icon" />
-            <p className="my-4">TAILWIND</p>
-          </div>
-          <div className="shadow-md shadow-[#040c16] hover:scale-110 duration-500">
-            <img className="w-20 mx-auto" src={FireBase} alt="FIREBASE icon" />
-            <p className="my-4">FIREBASE</p>
-          </div>
+          {skills.map(({ id, title, img, shadow, alt }) => (
+            <div
+              className={`shadow-md hover:scale-110 duration-500 ${shadow}`}
+              key={id}
+            >
+              <img className="w-20 mx-auto" src={img} alt={alt} />
+              <p className="my-4">{title}</p>
+            </div>
+          ))}
         </div>
       </div>
     </div>
