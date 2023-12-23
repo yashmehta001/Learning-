@@ -13,63 +13,63 @@ function Skills() {
       id: 1,
       title: "HTML",
       img: HTML,
-      shadow: "shadow-[#040c16]",
+      shadow: "hover:shadow-[#e34c26]",
       alt: "HTML icon",
     },
     {
       id: 2,
       title: "CSS",
       img: CSS,
-      shadow: "shadow-[#040c16]",
+      shadow: "hover:shadow-[#264de4]",
       alt: "CSS icon",
     },
     {
       id: 3,
       title: "JavaScript",
       img: JavaScript,
-      shadow: "shadow-[#040c16]",
+      shadow: "hover:shadow-[#f0db4f]",
       alt: "JAVASCRIPT icon",
     },
     {
       id: 4,
       title: "REACT",
       img: ReactImg,
-      shadow: "shadow-[#040c16]",
+      shadow: "hover:shadow-[#7cc5d9]",
       alt: "REACT icon",
     },
     {
       id: 5,
       title: "NODE JS",
       img: Node,
-      shadow: "shadow-[#040c16]",
+      shadow: "hover:shadow-[#68a063]",
       alt: "NODE JS icon",
     },
     {
       id: 6,
       title: "MONGO DB",
       img: Mongo,
-      shadow: "shadow-[#040c16]",
+      shadow: "hover:shadow-[#4db33d]",
       alt: "MONGO DB icon",
     },
     {
       id: 7,
       title: "Tailwind",
       img: Tailwind,
-      shadow: "shadow-[#040c16]",
+      shadow: "hover:shadow-[#b8c2cc]",
       alt: "Tailwind icon",
     },
     {
       id: 8,
       title: "FIREBASE",
       img: FireBase,
-      shadow: "shadow-[#040c16]",
+      shadow: "hover:shadow-[#F57C00]",
       alt: "FIREBASE icon",
     },
     {
       id: 9,
       title: "GITHUB",
       img: GitHub,
-      shadow: "shadow-[#040c16]",
+      shadow: "hover:shadow-[#fafbfc]",
       alt: "GITHUB icon",
     },
   ];
@@ -92,7 +92,7 @@ function Skills() {
         <div className="w-full grid grid-cols-2 sm:grid-cols-4 gap-4 text-center py-8 ">
           {skills.map(({ id, title, img, shadow, alt }) => (
             <div
-              className={`shadow-md hover:scale-110 duration-500 ${shadow}`}
+              className={`shadow-md hover:scale-110 duration-300 ${shadow}`}
               key={id}
             >
               <img className="w-20 mx-auto" src={img} alt={alt} />
