@@ -32,7 +32,7 @@ function Skills() {
               className={`shadow-md hover:scale-110 duration-300 ${shadow}`}
               key={id}
             >
-              <img className="w-20 mx-auto" src={img} alt={alt} />
+              <img className="w-20 mx-auto py-3" src={img} alt={alt} />
               <p className="my-4">{title}</p>
             </div>
           ))}
