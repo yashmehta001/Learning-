@@ -25,7 +25,6 @@ function Skills() {
             These are the technologies I&rsquo;ve worked with
           </p>
         </div>
-        {/* To-Do change the code so that it get data for an Online backend */}
         <div className="w-full grid grid-cols-2 sm:grid-cols-4 gap-4 text-center py-8 ">
           {skills.map(({ id, title, img, shadow, alt }) => (
             <div
