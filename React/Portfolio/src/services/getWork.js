@@ -10,6 +10,5 @@ export async function getProjects() {
   if (error) {
     return Projects;
   }
-  console.log(data)
   return data;
 }
