@@ -1,14 +1,15 @@
-import { skills } from "../constants/skills";
+import { Projects } from "../constants/work";
 import { supabase } from "./supabase";
 
-export async function getSkills() {
+export async function getProjects() {
   const { data, error } = await supabase
-    .from("Skills")
+    .from("Work")
     .select("*")
     .order("displayOrder", { ascending: true });
 
   if (error) {
-    return skills;
+    return Projects;
   }
+  console.log(data)
   return data;
 }

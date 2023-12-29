@@ -1,23 +1,15 @@
-import AWS from "../assets/aws.png";
+import { useEffect, useState } from "react";
+import { getProjects } from "../services/getWork";
+
 function Work() {
-  const Projects = [
-    {
-      id: 1,
-      shadow: "shadow-[#040C16]",
-      title: "React JS Application",
-      DemoLink: "/",
-      CodeLink: "/",
-      image: `url(${AWS})`,
-    },
-    {
-      id: 2,
-      shadow: "shadow-[#040C16]",
-      title: "React JS Application 2",
-      DemoLink: "/",
-      CodeLink: "/",
-      image: `url(${AWS})`,
-    },
-  ];
+  const [Projects, setProjects] = useState([]);
+  useEffect(() => {
+    async function fetchProjects() {
+      const data = await getProjects();
+      setProjects(data);
+    }
+    fetchProjects();
+  }, []);
   return (
     <div className="w-full md:h-screen bg-[#0a192f] text-gray-300" name="work">
       <div className="max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full">
@@ -29,11 +21,10 @@ function Work() {
         </div>
         {/* container */}
         <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
-          {/* To-Do change the code so that it get data for an Online backend */}
-          {Projects.map(({ id, shadow, title, DemoLink, CodeLink, image }) => (
+          {Projects.map(({ id, shadow, title, DemoLink, CodeLink, img }) => (
             <div
               key={id}
-              style={{ backgroundImage: image }}
+              style={{ backgroundImage: `url(${img})`}}
               className={`shadow-lg group container rounded-md text-center flex justify-center items-center mx-auto content-div ${shadow}`}
             >
               {/* Hover Effect */}
@@ -62,9 +53,6 @@ function Work() {
               </div>
             </div>
           ))}
-          {/* Grid Item */}
-          {/* To-Do change the code so that it get data for an Online backend */}
-          {/* To-Do add a loop to prevent code repetition */}
         </div>
       </div>
     </div>
