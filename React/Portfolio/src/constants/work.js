@@ -1,4 +1,5 @@
 import AWS from "../assets/aws.png";
+import GITHUB from "../assets/github.png";
 export const Projects = [
   {
     id: 1,
@@ -14,6 +15,6 @@ export const Projects = [
     title: "React JS Application 2",
     DemoLink: "/",
     CodeLink: "/",
-    img: AWS,
+    img: GITHUB,
   },
 ];
