@@ -1,5 +1,15 @@
+import { useState } from 'react';
+import NavBar from './scenes/navbar'
 function App() {
-  return <div className="app">Hello!World</div>;
+  const [selectedPage, setSelectedPage] = useState('home')
+  return (
+  <>
+    <NavBar 
+      selectedPage={selectedPage} 
+      setSelectedPage={setSelectedPage}
+    />
+  </>
+    );
 }
 
 export default App;
