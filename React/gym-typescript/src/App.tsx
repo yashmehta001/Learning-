@@ -3,6 +3,7 @@ import NavBar from './scenes/navbar'
 import { SelectedPage } from './shared/types';
 import Home from './scenes/Home';
 import Benefits from './scenes/benefits';
+import OurClasses from './scenes/ourclasses';
 
 
 function App() {
@@ -11,29 +12,31 @@ function App() {
   )
   const [isTopOfPage, setIsTopOfPage] = useState(true);
 
-  useEffect(()=>{
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
-    const handleScroll =()=>{
-      if(window.scrollY === 0){
-        setIsTopOfPage(true)
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY === 0) {
+        setIsTopOfPage(true);
         setSelectedPage(SelectedPage.Home);
-      } 
-      if(window.scrollY !== 0 ) setIsTopOfPage(false);
+      }
+      if (window.scrollY !== 0) setIsTopOfPage(false);
+    }
 
       window.addEventListener('scroll', handleScroll);
       return ()=> window.removeEventListener("scroll", handleScroll)
-    }
   },[]);
+
   return (
-  <>
+    <div className="app bg-gray-20">
+
     <NavBar
       isTopOfPage ={isTopOfPage}
       selectedPage={selectedPage} 
       setSelectedPage={setSelectedPage}
-    />
+      />
     <Home setSelectedPage={setSelectedPage}/>
     <Benefits setSelectedPage={setSelectedPage} />
-  </>
+    <OurClasses setSelectedPage={setSelectedPage} />
+    </div>
     );
 }
 
