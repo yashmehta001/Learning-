@@ -4,6 +4,8 @@ import { SelectedPage } from './shared/types';
 import Home from './scenes/Home';
 import Benefits from './scenes/benefits';
 import OurClasses from './scenes/ourclasses';
+import ContactUs from "./scenes/contactUs";
+import Footer from "./scenes/footer";
 
 
 function App() {
@@ -26,7 +28,7 @@ function App() {
   },[]);
 
   return (
-    <div className="app bg-gray-20">
+    <div className="app bg-gray-20 overflow-y-scroll no-scrollbar">
 
     <NavBar
       isTopOfPage ={isTopOfPage}
@@ -36,6 +38,8 @@ function App() {
     <Home setSelectedPage={setSelectedPage}/>
     <Benefits setSelectedPage={setSelectedPage} />
     <OurClasses setSelectedPage={setSelectedPage} />
+    <ContactUs setSelectedPage={setSelectedPage} />
+    <Footer />
     </div>
     );
 }
